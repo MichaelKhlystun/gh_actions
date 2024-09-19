@@ -10,7 +10,6 @@ outputs:
 runs:
   using: 'composite'
   steps:
-    - run: ./script.sh
+    - run: |
+        echo "HELLO ${{ inputs.name }}"
       shell: bash
-      with:
-        name: ${{ inputs.name }}
